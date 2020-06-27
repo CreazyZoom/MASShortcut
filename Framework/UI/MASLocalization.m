@@ -29,6 +29,6 @@ NSString *MASLocalizedString(NSString *key, NSString *comment) {
         }
     });
     return [localizationBundle localizedStringForKey:key
-        value:MASPlaceholderLocalizationString
+        value:key
         table:MASLocalizationTableName];
 }

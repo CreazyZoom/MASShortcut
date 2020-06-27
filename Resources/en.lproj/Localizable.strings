@@ -1,4 +1,4 @@
-﻿/* Cancel action button in recording state */
+/* Cancel action button in recording state */
 "Cancel" = "Cancel";
 
 /* Tooltip for non-empty shortcut button */
@@ -45,3 +45,7 @@
 
 /* Cancel action button for non-empty shortcut in recording state */
 "Use Old Shortcut" = "Use Old Shortcut";
+
+"The key combination is not support, try add more or change function key like ⌘ ⌥ ⌃" = "The key combination is support, try add more or change function key like ⌘ ⌥ ⌃";
+
+"The key combination is support" = "The key combination is support";

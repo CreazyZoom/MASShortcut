@@ -494,6 +494,25 @@ void *kUserDataHint = &kUserDataHint;
                     else {
                         // Key press with or without SHIFT is not valid input
                         NSBeep();
+                        
+                        
+                        // Prevent cancel of recording when Alert window is key
+                        [weakSelf activateResignObserver:NO];
+                        [weakSelf activateEventMonitoring:NO];
+                        NSString *format = MASLocalizedString(@"The key combination %@ cannot be used",
+                                                                                        @"Title for alert when shortcut is already used");
+                        NSAlert* alert = [[NSAlert alloc]init];
+                        alert.alertStyle = NSCriticalAlertStyle;
+                        alert.informativeText = MASLocalizedString(@"The key combination is not support, try add more or change function key like ⌘ ⌥ ⌃",
+                        @"The key combination is support");;
+                        alert.messageText = [NSString stringWithFormat:format, shortcut];;
+                        [alert addButtonWithTitle:MASLocalizedString(@"OK", @"Alert button when shortcut is already used")];
+
+                        [alert runModal];
+                        weakSelf.shortcutPlaceholder = nil;
+                        [weakSelf activateResignObserver:YES];
+                        [weakSelf activateEventMonitoring:YES];
+
                     }
                 }
                 else {

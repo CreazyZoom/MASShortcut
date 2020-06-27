@@ -1,4 +1,4 @@
-﻿/* Cancel action button in recording state */
+/* Cancel action button in recording state */
 "Cancel" = "取消";
 
 /* Tooltip for non-empty shortcut button */
@@ -45,3 +45,6 @@
 
 /* Cancel action button for non-empty shortcut in recording state */
 "Use Old Shortcut" = "還原快捷鍵";
+
+"The key combination is support, try add more or change function key like ⌘ ⌥ ⌃" = "无效组合键, 可以试试添加更换或者添加功能键，比如 ⌘ ⌥ ⌃";
+"The key combination is support" = "无效组合键";
